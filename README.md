@@ -25,5 +25,3 @@ Copy `config/settings.default.js` to `config/settings.js` and enter your setting
 design document `_design/profile` from the file `config/database/design.profile.json`
 
 Then in the command line type `node app.js` to run
-
-
