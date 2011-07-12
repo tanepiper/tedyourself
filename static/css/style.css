@@ -1,0 +1,453 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
+    color: #ff2b06;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 20px auto;
+}
+
+
+/* Header Area */
+
+#header {
+    border-bottom: 3px solid #FF2A06;
+    height: 80px;
+}
+
+#header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#header h1 a {
+    background: url(../img/header-logo.png) no-repeat;
+    text-indent: -5000px;
+    width: 468px;
+    height: 65px;
+    display: block
+}
+
+/* Content Setup */
+body.normal #content {
+    background-image: url(../img/ted-gradient-bg.png);
+    background-repeat: no-repeat;
+    padding-top: 5px;
+}
+
+#content .left {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+    padding-left: 10px;
+    text-align: justify;
+    color: #808080;
+}
+
+#content .left a {
+    color: #808080;
+}
+
+#content .left h1 {
+    padding: 0;
+    margin: 0 auto 10px;
+    font-size: 1.3em;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: lighter;
+    color: #000;
+}
+
+#content .left h1.feature-enhancements {
+    margin-bottom: 5px;
+}
+
+#content .left p {
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+#content .left .more-link {
+    margin: 5px 0 15px;
+}
+
+#content .left .more-link a {
+    color: #ff2b06;
+}
+
+#content .left ul {
+    margin-top: 0;
+}
+
+#content .left ul li {
+    padding: 0;
+    margin: 0 0 2px 0;
+}
+
+#content .left ul li a {
+    padding: 0 0 0 20px;
+    background-image: url(/img/icon_filter.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+#content .left ul li a:hover {
+    background-image: url(/img/icon_filter_over.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+#content .right {
+    float: left;
+    width: 700px;
+}
+
+
+#content .right .inner-left {
+    float: left;
+    width: 430px;
+    margin-right: 20px;
+}
+
+body.normal #content .right .inner-left {
+    height: 480px;
+}
+
+#content .right .inner-right {
+    float: left;
+    width: 250px;
+}
+
+#break h2 {
+    font-size: 2em;
+    padding: 0;
+    margin: 10px 0 15px 0;
+    font-weight: lighter;
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+/* Ted Yourself Button */
+#ted-yourself-button {
+    display: block;
+    width: 250px;
+    height: 333px;
+    background: url(../img/ted-yourself.gif) no-repeat;
+    text-indent: -5000px;
+}
+
+body.create-profile #ted-yourself-button {
+    display: none;
+}
+
+
+/* User Profile */
+
+#content hr.clearall {
+    clear: both;
+    color: #fff;
+    background-color: #fff;
+    border: 1px dotted #000;
+    border-style: none none dotted;
+}
+
+#content .profile {
+    background-color: #f1eeee;
+    width: 430px;
+    padding: 5px;
+}
+
+#content .profile .profile-image {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 79px;
+    height: 79px;
+}
+
+#content .profile .details {
+    float: left;
+    width: 340px;
+    height: 79px;
+    margin: 0;
+    padding: 0;
+}
+
+#content .profile .details h1 {
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+#content .profile .details h2 {
+    margin: 0 0 4px 0;
+    padding: 0;
+    color: #FF2A06;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+#content .profile .antoa {
+    font-weight: normal;
+}
+
+#content .profile .short-profile {
+    clear: both;
+    text-align: justify;
+    padding: 0 10px 0 0;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#content .profile .long-profile {
+    margin-bottom: 10px;
+    text-align: justify;
+    padding: 0 10px 0 0;
+}
+
+#content .profile .antoa .what-is-this, #content .left ul li a.what-is-this {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/what-is-this.png) no-repeat;
+    text-indent: -5000px;
+    float: right;
+    margin-top: 1px;
+    margin-right: 190px;
+}
+
+#content .left ul li a.what-is-this {
+    margin: 0;
+    padding: 0;
+}
+
+#content .profile .share {
+    background-color: #c7c6c6;
+    height: 27px;
+    padding: 5px 10px 0 0;
+    margin-right: 5px;
+}
+
+#content .profile .share input {
+    border-radius: 1em;
+    border: none;
+    text-align: center;
+}
+
+#content .profile .share ul {
+    list-style: none;
+    float: right;
+    width: 100%;
+}
+
+#content .profile .share ul li {
+    float: left;
+    margin-right: 5px;
+    width: 55px;
+    height: 20px;
+}
+
+#content .profile .share ul li.profile-url {
+    width: 250px;
+}
+
+#content .profile .share ul li.profile-share-google {
+    width: 25px;
+    padding-top: 3px;
+}
+
+#content .profile .share ul li.profile-share-facebook {
+    margin-top: 1px;
+    margin-right: 8px;
+}
+
+#content .profile .share ul li.profile-share-facebook a.facebook-share-button {
+    display: block;
+    width: 57px;
+    height: 18px;
+    text-indent: -5000px;
+    background-image: url(../img/fb-share-button.png);
+    background-repeat: no-repeat;
+}
+
+#content .profile .copy {
+    font-size: 0.7em;
+}
+
+#content .profile .delete-profile {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 100px;
+}
+
+#content .profile .ted-yourself-buttons {
+    background-color: #c7c6c6;
+    height: 27px;
+    padding: 5px 10px 0 0;
+    margin-right: 5px;
+}
+
+#content .profile .ted-yourself-buttons ul {
+    list-style: none;
+    float: right;
+}
+
+#content .profile .ted-yourself-buttons ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+#content .profile .reload {
+    display: block;
+    width: 103px;
+    height: 22px;
+    background-image: url(../img/button-reload.png);
+    background-repeat: no-repeat;
+    text-indent: -5000px;
+}
+
+#content .profile .save {
+    display: block;
+    width: 103px;
+    height: 22px;
+    background-image: url(../img/button-publish.png);
+    background-repeat: no-repeat;
+    text-indent: -5000px;
+}
+
+
+/* Other Profiles on the profile page */
+
+#content .extra-profiles {
+    margin-top: 15px;
+}
+
+#content .extra-profiles .extra-profile {
+    background-color: #f1eeee;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 430px;
+}
+
+#content .extra-profiles h1 {
+    padding: 0;
+    margin: 0 auto 10px;
+    font-size: 1.3em;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: lighter;
+    color: black;
+}
+
+#content .extra-profiles .extra-profile img {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+#content .extra-profiles .extra-profile h1 {
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+#content .extra-profiles .extra-profile h1 a, .extra-profiles .extra-profile h1 a:hover {
+    color: #000;
+}
+
+#content .extra-profiles .extra-profile .job_title {
+    color: #ff2b06;
+}
+
+#content .extra-profiles .extra-profile .short_bio {
+    font-style: italic;
+}
+
+
+/* About Page */
+#about .left {
+    float: left;
+    width: 690px;
+    margin-right: 20px;
+    margin-top:13px;
+}
+
+#about .right {
+    float: left;
+    width: 250px;
+}
+
+#about .about-text {
+    background-color: #f1eeee;
+    padding: 10px 10px 15px;
+    text-align: justify;
+    color: #808080;
+}
+
+#about .about-text h1 {
+    padding: 0;
+    margin: 0 auto 10px;
+    font-size: 1.3em;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: lighter;
+    color: black;
+
+}
+
+#about .visit-blonde {
+    text-align: right;
+}
+
+#about .visit-blonde a {
+    background-image: url(../img/go-button.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 30px;
+    color: #808080;
+}
+
+/* Footer */
+
+#footer {
+    clear: both;
+    border-top: 2px dotted #808080;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #808080;
+    padding-top: 16px;
+}
+
+#footer .left {
+    float: left;
+}
+
+#footer .right {
+    float: right;
+}
+
+#footer .ted-link {
+    color: #808080;
+}
+
+#footer .ted-link:hover {
+    font-weight: normal;
+}
+
+#footer .ted-link span {
+    color: #ff2b06;
+}

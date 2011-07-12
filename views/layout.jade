@@ -1,0 +1,75 @@
+!!! 5
+html(lang="en")
+    head
+        title=pageTitle
+
+        - if (metaTag)
+            meta(name="description", content=metaTag)
+
+        link(href="http://fonts.googleapis.com/css?family=Varela&v2", rel="stylesheet", type="text/css")
+        link(href="/css/style.css", rel="stylesheet", type="text/css")
+        link(href="/css/jquery.cluetip.css", rel="stylesheet", type="text/css")
+
+        script(type="text/javascript", src="/js/jquery-1.6.2.min.js")
+        script(type="text/javascript", src="/js/jquery.cluetip.min.js")
+        script(type="text/javascript)
+            $(document).ready(function() {
+                $('.what-is-this').cluetip({splitTitle: '|'});
+            });
+
+    body(class=bodyClass)
+        div#wrapper
+            div#header
+                h1
+                    a(href="/", title="TED Yourself Home") TED Yourself
+            div#break
+                h2 Intellectual superiority in seconds
+            div#content
+                div.left
+                    h1 A profound explanation:
+                    p Ted Yourself is an inspirational organisation, dedicated to letting everyone know just how awesome you are. 
+                    p Squaring your I.Q by the length of your job title, Ted Yourself lets you experience what making a profound contribution to the human race feels like without actually having to lift a philanthropic finger. 
+                    p To go from mediocre to magnificent, just click the Ted Yourself button.
+                    p(class="more-link")   
+                        a(href="/about", title="Read more about TED Yourself") More &raquo;
+            
+                    h1(class="feature-enhancements") Feature enhancements:
+                    ul
+                        li
+                            a(href="/", rel="recent") Recent TEDiologists
+                        li
+                            a(href="/tediologists-by-antoa", rel="antoa") TEDiologists by A.N.T.O.A
+                            a(href="#", class="what-is-this", rel="antoa", title="What Is A.N.T.O.A?| A.N.T.O.A (another number to obsess about) is calculated by multiplying the square root of your total Linked-In connections by the number of recommendations you have.") What is this?
+    
+                div.right
+                    div.inner-left!= body
+
+                    div.inner-right
+                        a(href="/authorise", title="TED Yourself", id="ted-yourself-button") TED Yourself with LinkedIn
+
+                div(style="clear:both")
+
+            div#footer
+                div.left
+                    a(href="http://ted.com", class="ted-link") Visit the real&nbsp;
+                        span TED&nbsp;
+                        | site.
+                    | TEDGlobal 2011 Edinburgh
+
+                div.right
+                    &copy; Copyright 2011
+                    a(href="http://blonde.net", class="blonde-link") Blonde
+
+                div(style="clear:both")
+
+script(type="text/javascript")
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '#{google_analytics_account_key}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();

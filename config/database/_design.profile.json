@@ -1,0 +1,17 @@
+{
+   "_id": "_design/profile",
+   "views": {
+       "by_id": {
+           "map": "function(doc) { if (doc._id) { emit(doc._id, null); } }"
+       },
+       "by_oauth_token": {
+           "map": "function(doc) { if (doc.oauth_access_token) { emit(doc.oauth_access_token, null); } }"
+       },
+       "by_antoa": {
+           "map": "function(doc) { if (doc.details.antoa) { emit(doc.details.antoa, null); }}"
+       },
+       "by_created": {
+           "map": "function(doc) { if (doc.created) { emit(doc.created, null); }}"
+       }
+   }
+}

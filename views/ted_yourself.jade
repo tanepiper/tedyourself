@@ -1,0 +1,20 @@
+.profile
+    img(src="data:#{user._attachments.profile_small.content_type};base64,#{user._attachments.profile_small.data}", alt=profile.details.name, class="profile-image")
+
+    .details
+        h1= profile.details.name
+        h2= profile.details.job_title
+
+        div.antoa ANTOA: #{profile.details.antoa}
+            a(href="#", class="what-is-this", rel="antoa", title="What Is A.N.T.O.A?| A.N.T.O.A (another number to obsess about) is calculated by multiplying the square root of your total Linked-In connections by the number of recommendations you have.") What is this?
+
+    div.short-profile=profile.details.short_bio
+
+    div.long-profile!=profile.details.long_bio
+
+    div(class="ted-yourself-buttons")
+        ul
+            li
+                a(href="/ted-yourself", class="reload") Reload
+            li
+                a(href="/save-profile", class="save") Save Profile

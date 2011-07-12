@@ -1,0 +1,84 @@
+.profile
+    img(src="http://tedyourself.iriscouch.com/tedyourself/#{profile._id}/profile_small", alt=profile.details.name, class="profile-image")
+
+    .details
+        h1= profile.details.name
+        h2= profile.details.job_title
+
+        div.antoa A.N.T.O.A: #{profile.details.antoa}
+            a(href="#", class="what-is-this", rel="antoa", title="What Is A.N.T.O.A?| A.N.T.O.A (another number to obsess about) is calculated by multiplying the square root of your total Linked-In connections by the number of recommendations you have.") What is this?
+
+    div.short-profile=profile.details.short_bio
+
+    div.long-profile!=profile.details.long_bio
+
+
+    div(class="share")
+        ul
+            li(class="profile-url")
+                input(type="text", size="20", class="profile-url", value=profile.profile_url)
+                a(href="#", class="copy") Copy to Clipboard
+            li(class="profile-share-twitter")
+                a(href="http://twitter.com/share", class="twitter-share-button", data-text="I just made my intellectually superior #TED Profile. To get yours, #TEDYourself", data-count="none", data-related="blondedigital:Human Ends. Digital Means.") Tweet This
+                script(type="text/javascript", src="http://platform.twitter.com/widgets.js")
+            li(class="profile-share-facebook")
+                a(href="http://www.facebook.com/sharer/sharer.php?s=100&p[title]=TED+Yourself&p[url]=#{profile.profile_url}&p[summary]=I+just+made+my+intellectually+superior+TED+profile.+To+get+yours+visit+http%3A%2F%2Ftedyourself.com&p[images][0]=http://tedyourself.iriscouch.com/tedyourself/#{profile._id}/profile_small", class="facebook-share-button") Facebook Share
+            li(class="profile-share-google")
+                g:plusone(size="small", count="false", href=profile.profile_url)
+                script(type="text/javascript", src="https://apis.google.com/js/plusone.js")
+
+    - if (user && user._id === profile._id)
+        a(href="/delete-profile/#{profile._id}/#{profile._rev}", class="delete-profile") Delete Profile
+
+script(type="text/javascript", src="/js/jquery.zclip.min.js")
+script(type="text/javascript)
+    $(document).ready(function() {
+        $('.delete-profile').click(function(e) {
+            var del = confirm('Are you sure you wish to delete your Ted Yourself profile?');
+
+            if (!del) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).ready(function() {
+            $('a.copy').zclip({
+                path:'/js/ZeroClipboard.swf',
+                copy:function(){return $('input.profile-url').val();}
+            });
+
+            $('a.facebook-share-button').click(function(e) {
+                console.log(this);
+                e.preventDefault();
+                var url = $(this).attr('href');
+                var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes,width=800,height=600";
+
+                window.open(url, 'facebook', strWindowFeatures);
+                return false;
+            });
+        });
+    });
+
+div(style="clear:both; height: 20px;")
+
+- if (other_profiles.length > 0)
+    .extra-profiles
+        h1 More recent TEDologists:
+
+        - other_profiles.forEach(function(doc) {
+            - var p = doc.doc
+            .extra-profile
+                img(src="http://tedyourself.iriscouch.com/tedyourself/#{p._id}/profile_small", alt=p.details.name, class="profile-image")
+                .details
+                    h1
+                        a(href="/profile/#{p._id}", title=p.details.name) #{p.details.name}
+                    div
+                        span.job_title=p.details.job_title
+                        |&nbsp;-&nbsp;  
+                        span.short_bio=p.details.short_bio
+
+                    div(style="clear:both;text-align:right; width:100%")
+                        a(href="/profile/#{p._id}", title=p.details.name) More &raquo;
+        -});
+        

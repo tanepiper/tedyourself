@@ -1,0 +1,187 @@
+div#profile-grid
+
+    // - Row 1
+    div#row-1.page-row(style="clear:both; height:160px;")
+        // - Column 1 & 2 shows 159 x 159 image
+        div(style="width:159px;height:159px;padding:0 1px 1px 0;float:left;")
+            - if (profiles[0])
+                a(href="/profile/#{profiles[0].doc._id}")
+                    div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[0].doc._id}/profile_large); width:159px; height: 159px;")
+                        span(style="text-align: center; display:block; width:159px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:134px")=profiles[0].doc.details.name
+        
+        // - Column 3 has two 79 x 79 images
+
+        div(style="float:left;padding: 0 1px 0 0")
+            div(style="height:79px;padding: 0 0 1px 0")
+                - if (profiles[1])
+                    a(href="/profile/#{profiles[1].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[1].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[1].doc.details.name
+            div(style="height:79px;)
+                - if (profiles[2])
+                    a(href="/profile/#{profiles[2].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[2].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[2].doc.details.name
+
+        // - Column 4 has 1 79 x 79 and 4 39x39 images
+        div(style="float:left;")
+            div(style="height:79px;padding: 0 0 1px 0")
+                - if (profiles[3])
+                    a(href="/profile/#{profiles[3].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[3].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[3].doc.details.name
+            
+            // - Column 4 39 x 39 images
+            div(style="width:80px; height:80px;")
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[4])
+                        a(href="/profile/#{profiles[4].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[4].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+                    -if (profiles[5])                
+                        a(href="/profile/#{profiles[5].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[5].doc._id}/profile_tiny); width:39px; height: 39px;")
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[6])
+                        a(href="/profile/#{profiles[6].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[6].doc._id}/profile_tiny); width:39px; height: 39px;")
+                div(style="width:39px; height:39px; float: left")
+                    -if (profiles[7])
+                        a(href="/profile/#{profiles[7].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[7].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+        // - Column 5 has 2 79 x 79 images
+        div(style="float:left;")
+            div(style="height:79px;")
+                - if (profiles[8])
+                    a(href="/profile/#{profiles[8].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[8].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[8].doc.details.name
+
+            div(style="height:79px;")
+                - if (profiles[9])
+                    a(href="/profile/#{profiles[9].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[9].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[9].doc.details.name
+
+
+    // - Row 2
+    div#row-2.page-row(style="clear:both; height:160px;")
+        // - Column 1 has 2 x 79 x 79
+        div(style="float:left;")
+            div(style="height:79px;")
+                - if (profiles[10])
+                    a(href="/profile/#{profiles[10].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[10].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[10].doc.details.name
+
+            div(style="height:79px;")
+                - if (profiles[11])
+                    a(href="/profile/#{profiles[11].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[11].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[11].doc.details.name
+
+        // - Column 2 has 4 x 39 and 1 x 79
+        div(style="float:left;")
+            // - Column 4 39 x 39 images
+            div(style="width:80px; height:79px;")
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[12])
+                        a(href="/profile/#{profiles[12].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[12].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+                    -if (profiles[13])                
+                        a(href="/profile/#{profiles[13].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[13].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[14])
+                        a(href="/profile/#{profiles[14].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[14].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+                    -if (profiles[15])
+                        a(href="/profile/#{profiles[15].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[15].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+            div(style="height:79px;padding: 0 0 1px 0")
+                - if (profiles[16])
+                    a(href="/profile/#{profiles[16].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[16].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[16].doc.details.name
+
+        // - Column 3 & 4 has a 159 x 159 image
+        div(style="width:159px;height:159px;padding:0 1px 1px 0;float:left;")
+            - if (profiles[17])
+                a(href="/profile/#{profiles[17].doc._id}")
+                    div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[17].doc._id}/profile_large); width:159px; height: 159px;")
+                        span(style="text-align: center; display:block; width:159px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:134px")=profiles[17].doc.details.name
+
+        // Column 5 has 1 x 79 and 3 x 39
+        div(style="float:left;")
+            div(style="height:79px;padding: 0 0 1px 0")
+                - if (profiles[18])
+                    a(href="/profile/#{profiles[18].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[18].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[18].doc.details.name
+            
+            // - Column 4 39 x 39 images
+            div(style="width:80px; height:79px;")
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[19])
+                        a(href="/profile/#{profiles[19].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[19].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+                    -if (profiles[20])                
+                        a(href="/profile/#{profiles[20].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[20].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[21])
+                        a(href="/profile/#{profiles[21].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[21].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+
+    // - Row 3
+    div#row-3.page-row(style="clear:both; height:160px;")
+    
+        // - Column 1 has 1 x 159 x 159
+        div(style="width:159px;height:159px;padding:0 1px 1px 0;float:left;")
+            - if (profiles[22])
+                a(href="/profile/#{profiles[22].doc._id}")
+                    div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[22].doc._id}/profile_large); width:159px; height: 159px;")
+                        span(style="text-align: center; display:block; width:159px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:134px")=profiles[22].doc.details.name
+
+        // - Column 2 has 1 x 79 x 79
+        div(style="float:left;width:79px;height:179px; padding: 0 1px 1px 0;")
+            div(style="width:79px; height:79px;")
+                - if (profiles[23])
+                    a(href="/profile/#{profiles[23].doc._id}")
+                        div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[23].doc._id}/profile_small); width:79px; height: 79px;")
+                            span(style="text-align: center; font-size: 70%; display:block; width:79px; height: 25px; color: #fff; background-color: #000; opacity: 0.9;position:relative; top:52px; padding-top: 2px;")=profiles[23].doc.details.name
+
+            div(style="width:79px; height:79px;")
+
+        // - Column 3 has 1 x 39 x 39
+        div(style="float:left;")
+            // - Column 4 39 x 39 images
+            div(style="width:80px; height:79px;")
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+                    -if (profiles[24])
+                        a(href="/profile/#{profiles[24].doc._id}")
+                            div(style="background-image:url(http://tedyourself.iriscouch.com/tedyourself/#{profiles[24].doc._id}/profile_tiny); width:39px; height: 39px;")
+
+                div(style="width:39px; height:39px; float: left")
+
+                div(style="width:39px; height:39px; padding: 0 1px 0 0; float: left")
+
+                div(style="width:39px; height:39px; float: left")
+
+            div(style="width: 79px; height: 79px;padding: 0 0 1px 0")
+
+        // - Column 4 & 5 are empty
+        div(style="width:159px;height:159px;padding:0 1px 1px 0;float:left;")
