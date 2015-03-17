@@ -18,6 +18,9 @@ The site was built in [nodejs](http://nodejs.org), with [CouchDB](http://couchdb
 is a really powerful tool. To show you what it can do, we made TED Yourself open source. If you like what you've
 seen, then get in touch to find out what Blonde can do for you.
 
+### This project is no longer maintained and kept for archive purposes only.
+
+
 To Run
 ------
 
